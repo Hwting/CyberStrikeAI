@@ -280,17 +280,29 @@
 
 /* ---------- HITL 审批停靠区 ---------- */
 
+/* 审批停靠区整块（金色边框 + 背景 + 标题 + 卡片）与上方消息卡片同宽并居中 */
 .chat-hitl-dock {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(var(--chat-content-width) - 44px);
+    margin-inline: auto;
     border-top: 2px solid var(--semi-color-warning);
     background: var(--semi-color-bg-2);
-    padding: 8px 14px;
+    padding-block: 8px;
+    padding-inline: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
     max-height: 42%;
     overflow-y: auto;
 }
-.chat-hitl-dock-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.chat-hitl-dock > .chat-hitl-dock-head,
+.chat-hitl-dock > .chat-hitl-card {
+    box-sizing: border-box;
+    width: 100%;
+}
+.chat-hitl-dock-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-inline: 4px; }
 
 .chat-hitl-card .semi-card-body { padding: 10px 12px; }
 .chat-hitl-card .semi-card-header-wrapper { padding: 8px 12px 0; }

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "web/frontend/src/pages/chat/page.css"
+        ],
+        "createdAt": "2026-11-25T16:14:52.689Z",
+        "reason": "agent: pre-existing .chat-note severity callout (color encodes info/success/warning/danger); intentional semantic styling kept, unrelated to the approval-dock fix"
+      }
+    ]
+  }
+}
